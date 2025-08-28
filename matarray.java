@@ -7,9 +7,10 @@ public class matarray{
                     {27,29,37,48},
                     {32,33,39,50}};
         int target=29;
-        System.out.println("Program started");
-
-        System.out.println(Arrays.toString(search(mat,target)));
+       // ...existing code...
+int[] result = search(mat, target);
+System.out.println(result[0] + " " + result[1]);
+// ...existing code...
 
 
     }
