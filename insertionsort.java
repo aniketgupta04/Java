@@ -1,18 +1,25 @@
 public class insertionsort {
     void sort(int [] arr  ){
         int n = arr.length;
-        for(int i=1;i<n;i++){
-            int key = arr[i];
-            int j=i-1;
-            while(j>=0 && arr[j]>key){
-                arr[j+1] = arr[j];
+        for(int i=0;i<n;i++){
+            int j=i;
+
+            while(j>0 && arr[j-1]>arr[j]){
+                swap(arr,j);
                 j--;
             }
-             arr[j+1]=key;
+
         }
 
     }
+    public static int[] swap(int arr[], int j){
 
+        int temp=arr[j];
+        arr[j]= arr[j-1];
+        arr[j-1]=temp;
+
+        return arr;
+    }
     public static void main(String[] args) {
         int [] arr = {50,45,98,7,65};
         insertionsort ob = new insertionsort();
